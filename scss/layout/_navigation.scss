@@ -1,0 +1,55 @@
+.navigation {
+  @include maxWidth();
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+
+  .logo {
+    display: flex;
+    color: color(black);
+
+    i {
+      font-size: size(xl);
+    }
+
+    h3 {
+      @include headingStyles();
+      font-size: size(xl);
+    }
+  }
+
+  &-links {
+    display: flex;
+
+    li {
+      margin-right: 2rem;
+    }
+
+    a {
+      font-size: size(sm);
+      color: color(black);
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: color(primary);
+      }
+    }
+  }
+
+  &-right {
+    a {
+      margin-right: 2rem;
+    }
+
+    i {
+      color: color(black);
+      font-size: size(sm);
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: color(primary);
+      }
+    }
+  }
+}
