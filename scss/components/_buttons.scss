@@ -11,3 +11,10 @@
     background-color: lighten(color(primary), 5%);
   }
 }
+
+.btn-light {
+  @extend .btn;
+  background-color: transparent;
+  border: 0.1rem solid color(primary);
+  margin-left: 2rem;
+}

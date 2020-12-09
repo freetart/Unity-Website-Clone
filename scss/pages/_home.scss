@@ -1,0 +1,96 @@
+// HERO
+.hero {
+  height: 100vh;
+
+  .video-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .video-bg {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .video-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+}
+
+.hero-content {
+  &-top {
+    color: color(white);
+    z-index: 100;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      @include headingStyles();
+      font-size: size(xl) + 4rem;
+    }
+
+    p {
+      @include headingStyles();
+      font-size: size(lg);
+      margin-bottom: 3rem;
+      width: 70%;
+    }
+  }
+
+  &-bottom {
+    z-index: 100;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+    .card {
+      color: color(white);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease-in-out;
+      border: 0.3rem solid color(white);
+      padding: 2rem;
+      width: 25rem;
+      justify-content: space-around;
+
+      &:hover {
+        background-color: color(white);
+        color: color(black);
+      }
+
+      h3 {
+        @include headingStyles();
+        font-size: size(md);
+        margin-bottom: 1rem;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(xs);
+        margin-bottom: 1rem;
+      }
+
+      .card-link {
+        font-size: size(xs);
+        color: color(primary);
+      }
+    }
+  }
+}
+// END OF HERO
