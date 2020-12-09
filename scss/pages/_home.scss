@@ -94,3 +94,40 @@
   }
 }
 // END OF HERO
+// FEATURED PRODUCTS
+.cards2 {
+  @include maxWidth();
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .card2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0.4rem 0.4rem 1rem #f2f2f2;
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      @include headingStyles();
+      font-size: size(lg);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(sm);
+      margin: 2rem 0;
+    }
+
+    .btn {
+      text-align: center;
+    }
+  }
+}
+// END OF FEATURED PRODUCTS
