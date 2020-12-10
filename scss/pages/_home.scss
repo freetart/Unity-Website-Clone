@@ -359,3 +359,36 @@
   }
 }
 // END OF LOGOS SECTION
+// CONTACT
+.contact {
+  @include maxWidth();
+  @include sectionSpacing();
+  background: linear-gradient((rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))),
+    url(/images/comp.jpg) right center/cover no-repeat;
+  height: 40vh;
+  border-radius: 1rem;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 40vh;
+    color: color(white);
+    text-align: left;
+
+    h2 {
+      @include headingStyles();
+      font-size: size(xl);
+      width: 50%;
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(md);
+      width: 50%;
+      margin: 2rem 0;
+    }
+  }
+}
+// END OF CONTACT
