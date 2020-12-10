@@ -11,6 +11,11 @@
     grid-template-columns: repeat(2, 1fr);
     border-bottom: 0.1rem solid color(text);
     padding: 2rem;
+    grid-gap: 2rem;
+
+    @include response(lg) {
+      grid-template-columns: 1fr;
+    }
 
     h3 {
       @include headingStyles();
@@ -39,6 +44,10 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     padding: 2rem;
+
+    @include response(xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     h3 {
       @include headingStyles();

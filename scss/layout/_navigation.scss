@@ -11,6 +11,10 @@
   z-index: 1000;
   background-color: color(black);
 
+  @include response(lg) {
+    justify-content: space-between;
+  }
+
   .logo {
     display: flex;
     color: color(white);
@@ -27,6 +31,10 @@
 
   &-links {
     display: flex;
+
+    @include response(lg) {
+      display: none;
+    }
 
     li {
       margin-right: 2rem;

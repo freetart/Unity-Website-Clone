@@ -304,6 +304,10 @@
     grid-gap: 2rem;
     margin-top: 2rem;
 
+    @include response(xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .about-card {
       display: flex;
       flex-direction: column;
@@ -337,6 +341,10 @@
   align-items: center;
   justify-content: center;
 
+  @include response(xl) {
+    grid-template-columns: 1fr;
+  }
+
   &-content {
     h2 {
       @include headingStyles();
@@ -356,6 +364,10 @@
     img {
       border-radius: 1rem;
       box-shadow: 0.4rem 0.4rem 1rem #f2f2f2;
+
+      @include response(xl) {
+        margin-top: 2rem;
+      }
     }
   }
 }
@@ -402,9 +414,14 @@
   background: linear-gradient((rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))),
     url(/images/comp.jpg) right center/cover no-repeat;
   height: 40vh;
-  border-radius: 1rem;
   margin-bottom: 5rem;
   box-shadow: 0.4rem 0.4rem 1rem #f2f2f2;
+
+  @include response(lg) {
+    height: 60vh;
+    background: linear-gradient((rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))),
+      url(/images/comp.jpg) center center/cover no-repeat;
+  }
 
   &-content {
     display: flex;
