@@ -1,0 +1,87 @@
+.footer {
+  background-color: color(black);
+
+  &-content {
+    @include maxWidth();
+    @include sectionSpacing();
+  }
+
+  &-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 0.1rem solid color(text);
+    padding: 2rem;
+
+    h3 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(md);
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: color(text);
+      font-size: size(xs);
+      margin-right: 2rem;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: color(primary);
+      }
+    }
+
+    i {
+      font-size: size(md);
+    }
+  }
+
+  &-middle {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 2rem;
+
+    h3 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(md);
+      margin: 1rem 0;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: color(text);
+      font-size: size(xs);
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: color(primary);
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    p {
+      color: color(white);
+      font-size: size(xs);
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: color(text);
+      font-size: size(xs);
+      margin-right: 2rem;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: color(primary);
+      }
+    }
+  }
+}

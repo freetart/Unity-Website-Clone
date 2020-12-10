@@ -367,6 +367,8 @@
     url(/images/comp.jpg) right center/cover no-repeat;
   height: 40vh;
   border-radius: 1rem;
+  margin-bottom: 5rem;
+  box-shadow: 0.4rem 0.4rem 1rem #f2f2f2;
 
   &-content {
     display: flex;
