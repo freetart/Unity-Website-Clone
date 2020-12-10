@@ -1,61 +1,60 @@
 .header {
   width: 100%;
+}
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: color(black);
 
-  .navigation {
+  .logo {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: color(black);
+    color: color(white);
 
-    .logo {
-      display: flex;
+    i {
+      font-size: size(xl);
+    }
+
+    h3 {
+      @include headingStyles();
+      font-size: size(xl);
+    }
+  }
+
+  &-links {
+    display: flex;
+
+    li {
+      margin-right: 2rem;
+    }
+
+    a {
+      font-size: size(sm);
       color: color(white);
+      transition: color 0.2s ease-in-out;
 
-      i {
-        font-size: size(xl);
-      }
-
-      h3 {
-        @include headingStyles();
-        font-size: size(xl);
+      &:hover {
+        color: color(primary);
       }
     }
+  }
 
-    &-links {
-      display: flex;
-
-      li {
-        margin-right: 2rem;
-      }
-
-      a {
-        font-size: size(sm);
-        color: color(white);
-        transition: color 0.2s ease-in-out;
-
-        &:hover {
-          color: color(primary);
-        }
-      }
+  &-right {
+    a {
+      margin-right: 2rem;
     }
 
-    &-right {
-      a {
-        margin-right: 2rem;
-      }
+    i {
+      color: color(white);
+      font-size: size(sm);
+      transition: color 0.2s ease-in-out;
 
-      i {
-        color: color(white);
-        font-size: size(sm);
-        transition: color 0.2s ease-in-out;
-
-        &:hover {
-          color: color(primary);
-        }
+      &:hover {
+        color: color(primary);
       }
     }
   }

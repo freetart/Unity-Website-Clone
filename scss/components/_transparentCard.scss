@@ -1,0 +1,41 @@
+.card {
+  color: color(white);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  border: 0.3rem solid color(white);
+  padding: 2rem;
+  width: 25rem;
+  justify-content: space-around;
+
+  &:hover {
+    background-color: color(white);
+    color: color(black);
+    p {
+      opacity: 1;
+    }
+  }
+
+  h3 {
+    @include headingStyles();
+    font-size: size(md);
+    margin-bottom: 1rem;
+  }
+
+  small {
+    font-size: size(xs) - 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    @include textStyles();
+    font-size: size(xs);
+    margin-bottom: 1rem;
+    opacity: 0;
+  }
+
+  .card-link {
+    font-size: size(xs);
+    color: color(primary);
+  }
+}
