@@ -26,3 +26,11 @@
   max-width: 1300px;
   margin: 0 auto;
 }
+
+@mixin response($breakpoint) {
+  @if ($breakpoint == xxl) {
+    @media (max-width: 1100px) {
+      @content;
+    }
+  }
+}

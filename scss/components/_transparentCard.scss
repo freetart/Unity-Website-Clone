@@ -8,9 +8,13 @@
   width: 25rem;
   justify-content: space-around;
 
+  @include response(xxl) {
+  }
+
   &:hover {
     background-color: color(white);
     color: color(black);
+
     p {
       opacity: 1;
     }
