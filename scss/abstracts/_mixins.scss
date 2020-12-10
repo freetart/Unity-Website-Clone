@@ -45,4 +45,10 @@
       @content;
     }
   }
+
+  @if ($breakpoint == md) {
+    @media (max-width: 570px) {
+      @content;
+    }
+  }
 }

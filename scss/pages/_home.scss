@@ -34,20 +34,23 @@
     position: absolute;
     top: 25%;
     left: 50%;
+    width: 90%;
+    margin: auto;
+
     transform: translate(-50%, -50%);
 
-    @include response(xxl) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    @include response(md) {
+      top: 50%;
     }
 
     h1 {
       @include headingStyles();
       font-size: size(xl) + 4rem;
+      margin: 0;
+      width: 100%;
 
       @include response(xxl) {
-        font-size: size(xl) + 1rem;
+        font-size: size(xl) + 2rem;
       }
     }
 
@@ -60,6 +63,15 @@
       @include response(xxl) {
         display: none;
       }
+
+      @include response(md) {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    .btn {
+      margin-right: 2rem;
     }
   }
 
@@ -76,6 +88,10 @@
     @include response(xxl) {
       grid-template-columns: repeat(2, 1fr);
       top: 65%;
+    }
+
+    @include response(md) {
+      top: 50%;
     }
   }
 }
@@ -186,12 +202,20 @@
         color: color(white);
         font-size: size(xl);
         margin-bottom: 1rem;
+
+        @include response(md) {
+          font-size: size(lg);
+        }
       }
 
       p {
         @include textStyles();
         color: color(white);
         font-size: size(sm);
+
+        @include response(md) {
+          font-size: size(xs);
+        }
       }
     }
   }
@@ -265,6 +289,10 @@
       font-size: size(lg);
       width: 70%;
       margin: 2rem 0;
+
+      @include response(md) {
+        width: 100%;
+      }
     }
   }
 
@@ -295,6 +323,10 @@
       font-size: size(md);
       width: 70%;
       margin: 2rem 0;
+
+      @include response(md) {
+        width: 100%;
+      }
     }
   }
 
@@ -306,6 +338,10 @@
 
     @include response(xl) {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include response(md) {
+      grid-template-columns: 1fr;
     }
 
     .about-card {
@@ -350,6 +386,10 @@
       @include headingStyles();
       font-size: size(xl);
       width: 70%;
+
+      @include response(md) {
+        width: 100%;
+      }
     }
 
     p {
@@ -357,6 +397,10 @@
       font-size: size(md);
       width: 70%;
       margin: 2rem 0;
+
+      @include response(md) {
+        width: 100%;
+      }
     }
   }
 
@@ -413,12 +457,10 @@
   @include sectionSpacing();
   background: linear-gradient((rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))),
     url(/images/comp.jpg) right center/cover no-repeat;
-  height: 40vh;
   margin-bottom: 5rem;
   box-shadow: 0.4rem 0.4rem 1rem #f2f2f2;
 
   @include response(lg) {
-    height: 60vh;
     background: linear-gradient((rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))),
       url(/images/comp.jpg) center center/cover no-repeat;
   }
@@ -428,7 +470,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 40vh;
     color: color(white);
     text-align: left;
 
@@ -436,6 +477,10 @@
       @include headingStyles();
       font-size: size(xl);
       width: 50%;
+
+      @include response(md) {
+        width: 100%;
+      }
     }
 
     p {
@@ -443,6 +488,10 @@
       font-size: size(md);
       width: 50%;
       margin: 2rem 0;
+
+      @include response(md) {
+        width: 100%;
+      }
     }
   }
 }

@@ -49,6 +49,10 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
+    @include response(md) {
+      grid-template-columns: 1fr;
+    }
+
     h3 {
       @include headingStyles();
       color: color(white);

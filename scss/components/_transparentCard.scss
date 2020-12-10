@@ -8,7 +8,8 @@
   width: 25rem;
   justify-content: space-around;
 
-  @include response(xxl) {
+  @include response(md) {
+    display: none;
   }
 
   &:hover {
@@ -24,6 +25,10 @@
     @include headingStyles();
     font-size: size(md);
     margin-bottom: 1rem;
+
+    @include response(md) {
+      font-size: size(sm);
+    }
   }
 
   small {
@@ -36,6 +41,10 @@
     font-size: size(xs);
     margin-bottom: 1rem;
     opacity: 0;
+
+    // @include response(xxl) {
+    //   display: none;
+    // }
   }
 
   .card-link {
