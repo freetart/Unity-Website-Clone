@@ -153,6 +153,16 @@
       "article4 article6 article6"
       "article5 article6 article6";
     grid-gap: 2rem;
+
+    @include response(xl) {
+      grid-template-areas:
+        "article1"
+        "article2"
+        "article3"
+        "article4"
+        "article5"
+        "article6";
+    }
   }
 
   .article {
@@ -244,6 +254,7 @@
   }
 
   &-content-top {
+    @include flexLayout();
     h3 {
       color: color(white);
       font-size: size(xl);
@@ -261,6 +272,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5rem;
+
+    @include response(xl) {
+      display: none;
+    }
   }
 }
 // END OF MADEWTHUNITY

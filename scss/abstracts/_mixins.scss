@@ -33,4 +33,16 @@
       @content;
     }
   }
+
+  @if ($breakpoint == xl) {
+    @media (max-width: 975px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == lg) {
+    @media (max-width: 750px) {
+      @content;
+    }
+  }
 }
