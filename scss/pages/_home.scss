@@ -324,3 +324,38 @@
   }
 }
 // END OF HIRING
+// LOGOS SECTION
+.logos-section {
+  @include maxWidth;
+  @include sectionSpacing();
+
+  &-header {
+    h3 {
+      @include headingStyles();
+      font-size: size(xl);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(md);
+      margin: 2rem 0;
+    }
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &-container {
+      margin: 2rem;
+    }
+
+    img {
+      width: 12rem;
+      object-fit: cover;
+    }
+  }
+}
+// END OF LOGOS SECTION
