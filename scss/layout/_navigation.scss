@@ -1,6 +1,9 @@
 .header {
   width: 100%;
 }
+.current {
+  border-bottom: 0.2rem solid color(primary);
+}
 .navigation {
   display: flex;
   justify-content: space-around;

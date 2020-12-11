@@ -1,0 +1,41 @@
+// HERO
+.sub-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/solutions/futurebg.jpg) center center/cover no-repeat;
+  height: 60vh;
+
+  &-content {
+    @include flexLayout();
+    @include maxWidth();
+    @include sectionSpacing();
+    text-align: left;
+    align-items: flex-start;
+    height: 60vh;
+
+    h2 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(xl) + 2rem;
+      width: 70%;
+      margin-bottom: 1rem;
+
+      @include response(lg) {
+        font-size: size(xl);
+        width: 90%;
+      }
+    }
+
+    p {
+      @include textStyles();
+      color: color(white);
+      font-size: size(lg);
+      width: 70%;
+
+      @include response(lg) {
+        font-size: size(sm);
+        width: 90%;
+      }
+    }
+  }
+}
+// END OF HERO

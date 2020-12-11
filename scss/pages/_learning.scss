@@ -1,0 +1,134 @@
+// HERO
+.sub-hero-learning {
+  @extend .sub-hero;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/learning/herobg.jpg) center center/cover no-repeat;
+}
+// END OF HERO
+// LEARNING
+.learning-cards {
+  @include sectionSpacing();
+  @include maxWidth();
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  .learning-card {
+    box-shadow: 1rem 1rem 1rem #d8d8d8;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    h3 {
+      @include headingStyles();
+      font-size: size(lg);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(sm);
+      margin: 2rem 0;
+    }
+
+    a {
+      color: color(primary);
+      font-size: size(sm);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// END OF LEARNING
+// EXPLORE
+.explore {
+  @include maxWidth();
+  @include sectionSpacing();
+
+  &-content {
+    h2 {
+      @include headingStyles();
+      font-size: size(xl);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(md);
+      margin: 2rem 0;
+      width: 70%;
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .explore-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    img {
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+    }
+
+    h3 {
+      @include headingStyles();
+      font-size: size(lg);
+    }
+
+    small {
+      font-size: size(xs);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(sm);
+    }
+
+    a {
+      font-size: size(sm);
+      color: color(primary);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+// END OF EXPLORE
+// STUDENT PLAN
+.student-plan {
+  background: url(/images/learning/bg2.jpg) center center/cover no-repeat;
+  object-fit: cover;
+
+  &-content {
+    margin-left: 5rem;
+
+    @include response(lg) {
+      margin-left: 0;
+    }
+  }
+}
+// END OF STUDENT PLAN
+// QUOTE
+.quote {
+  @include sectionSpacing();
+  @include maxWidth();
+
+  &-content {
+    span {
+      color: color(primary);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(xl);
+      font-style: italic;
+    }
+  }
+}
+// END OF QUOTE
