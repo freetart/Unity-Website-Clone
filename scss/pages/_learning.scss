@@ -13,6 +13,10 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
 
+  @include response(lg) {
+    grid-template-columns: 1fr;
+  }
+
   .learning-card {
     box-shadow: 1rem 1rem 1rem #d8d8d8;
     padding: 2rem;
@@ -56,6 +60,10 @@
       font-size: size(md);
       margin: 2rem 0;
       width: 70%;
+
+      @include response(lg) {
+        width: 100%;
+      }
     }
   }
 
@@ -63,6 +71,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+
+    @include response(xl) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .explore-card {
@@ -128,6 +140,11 @@
       @include textStyles();
       font-size: size(xl);
       font-style: italic;
+      margin-bottom: 1rem;
+
+      @include response(md) {
+        font-size: size(md);
+      }
     }
   }
 }
