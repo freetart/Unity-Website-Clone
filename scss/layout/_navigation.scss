@@ -52,6 +52,10 @@
   }
 
   &-right {
+    @include response(lg) {
+      display: none;
+    }
+
     a {
       margin-right: 2rem;
     }
