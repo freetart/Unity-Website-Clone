@@ -39,6 +39,10 @@
 
     transform: translate(-50%, -50%);
 
+    @include response(xxl) {
+      top: 20%;
+    }
+
     @include response(md) {
       top: 50%;
     }
