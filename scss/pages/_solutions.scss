@@ -7,6 +7,7 @@
   &-content {
     @include flexLayout();
     @include maxWidth();
+    @include sectionSpacing();
     text-align: left;
     align-items: flex-start;
     height: 60vh;
@@ -17,6 +18,11 @@
       font-size: size(xl) + 2rem;
       width: 70%;
       margin-bottom: 1rem;
+
+      @include response(lg) {
+        font-size: size(xl);
+        width: 90%;
+      }
     }
 
     p {
@@ -24,6 +30,11 @@
       color: color(white);
       font-size: size(lg);
       width: 70%;
+
+      @include response(lg) {
+        font-size: size(sm);
+        width: 90%;
+      }
     }
   }
 }
@@ -35,6 +46,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+
+  @include response(lg) {
+    grid-template-columns: 1fr;
+  }
 
   &-card {
     box-shadow: 0.5rem 0.5rem 1rem #cecece;
@@ -84,6 +99,10 @@
 
   &-content {
     margin-left: 5rem;
+
+    @include response(lg) {
+      margin-left: 0;
+    }
   }
 }
 // END OF SOLUTIONS CONTACT
