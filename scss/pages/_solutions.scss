@@ -1,0 +1,89 @@
+// HERO
+.solutions-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images//solutions/futurebg.jpg) center center/cover no-repeat;
+  height: 60vh;
+
+  &-content {
+    @include flexLayout();
+    @include maxWidth();
+    text-align: left;
+    align-items: flex-start;
+    height: 60vh;
+
+    h2 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(xl) + 2rem;
+      width: 70%;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include textStyles();
+      color: color(white);
+      font-size: size(lg);
+      width: 70%;
+    }
+  }
+}
+// END OF HERO
+// SOLUTIONS
+.solutions {
+  @include maxWidth();
+  @include sectionSpacing();
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+
+  &-card {
+    box-shadow: 0.5rem 0.5rem 1rem #cecece;
+    border-radius: 0 0 1rem 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(0.98);
+      box-shadow: -0.5rem 0.5rem 1rem #cecece;
+    }
+
+    img {
+      border-radius: 1rem 1rem 0 0;
+      width: 100%;
+    }
+
+    &-content {
+      padding: 2rem;
+
+      h3 {
+        @include headingStyles();
+        font-size: size(xl);
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(xs);
+        margin: 1rem 0;
+      }
+
+      a {
+        color: color(primary);
+        font-size: size(xs);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+// END OF SOLUTIONS
+// SOLUTIONS CONTACT
+.solutions-contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(/images/solutions/futurebg2.jpg) center center/cover no-repeat;
+
+  &-content {
+    margin-left: 5rem;
+  }
+}
+// END OF SOLUTIONS CONTACT
