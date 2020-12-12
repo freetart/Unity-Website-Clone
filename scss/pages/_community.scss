@@ -1,0 +1,64 @@
+// HERO
+.sub-hero-community {
+  @extend .sub-hero;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/community/communitybg.jpg) center center/cover no-repeat;
+}
+// END OF HERO
+// COMMUNITY
+.community {
+  @extend .explore;
+
+  .community-content {
+    @extend .explore-content;
+  }
+
+  .community-cards {
+    @extend .explore-cards;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include response(xl) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .community-card {
+    @extend .explore-card;
+  }
+}
+// END OF COMMUNITY
+// MAP
+.maps {
+  @include sectionSpacing();
+  @include maxWidth();
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+
+  @include response(lg) {
+    grid-template-columns: 1fr;
+  }
+
+  .map-info {
+    h3 {
+      @include headingStyles();
+      font-size: size(xl);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(md);
+      margin: 1rem 0;
+    }
+
+    a {
+      color: color(primary);
+      font-size: size(md);
+    }
+  }
+  iframe {
+    width: 100%;
+    height: 50vh;
+  }
+}
+// END OF MAP

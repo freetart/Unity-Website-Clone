@@ -64,11 +64,7 @@
       @include textStyles();
       font-size: size(md);
       margin: 2rem 0;
-      width: 70%;
-
-      @include response(lg) {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
 
