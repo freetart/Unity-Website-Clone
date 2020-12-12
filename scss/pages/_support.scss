@@ -1,0 +1,47 @@
+// HERO
+.sub-hero-support {
+  @extend .sub-hero;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/support/typingbg1.jpg) center center/cover no-repeat;
+}
+// END OF HERO
+// SUPPORT
+.support-heading {
+  @include maxWidth();
+  margin-top: 2rem;
+  padding-left: 2rem;
+
+  h2 {
+    @include headingStyles();
+    font-size: size(xl) + 1rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    @include textStyles();
+    font-size: size(md);
+  }
+}
+
+.support-cards {
+  @extend .learning-cards;
+
+  .support-card {
+    @extend .learning-card;
+  }
+}
+// END OF SUPPORT
+// SUPPORT CONTACT
+.support-contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/support/typingbg2.jpg) center center/cover no-repeat;
+
+  &-content {
+    margin-left: 5rem;
+
+    @include response(lg) {
+      margin-left: 0;
+    }
+  }
+}
+// END OF SUPPORT CONTACT
